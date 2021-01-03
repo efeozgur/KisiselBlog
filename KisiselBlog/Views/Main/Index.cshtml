@@ -1,0 +1,88 @@
+﻿@model List<KisiselBlog.Models.modeller.Yazi>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    @*css ler*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @*css sonu*@
+    @*jsler*@
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    @*jssonu*@
+
+    <style>
+        section {
+            border-width: 1px;
+            border-style: dotted;
+            border-radius: 3px;
+            box-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+            display: block;
+            margin: auto;
+            padding: 10px;
+            background-color: #f9f9f9;
+            width: 70%
+        }
+
+        h2 {
+            margin-top: 10px
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2 style="text-align: center"><span style="color:lightgray">#efeozgur</span> karalama defteri</h2>
+<hr style="border-color:lightgrey" />
+    <div class="container">
+        <div class="col-md-12">
+
+            <div style="float: left" class="col-md-9">
+
+                @foreach (var i in Model)
+                {
+                    <div class="yazi">
+
+                        <h2> <a href="#">@i.baslik</a> <small style="font-size: 10px">@i.tarih</small> </h2>
+                        @i.metin 
+                                 <hr />
+                    </div>
+                }
+
+
+
+            </div>
+            <div style="float: right; " class="col-md-3">
+                <div style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" class="list-group ">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">#son yazılar</h5>
+                        </div>
+
+                    </a>
+
+                    @foreach (var yazi in Model)
+                    {
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">@yazi.baslik</h5>
+                                <small class="text-muted">@yazi.tarih</small>
+                            </div>
+                            <p class="mb-1">@yazi.metin.Substring(0, 100)</p>
+
+                        </a>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
