@@ -82,3 +82,4 @@ C:\Users\PC GAMER\Desktop\CProject\KisiselBlog\KisiselBlog\bin\EntityFramework.x
 C:\Users\PC GAMER\Desktop\CProject\KisiselBlog\KisiselBlog\bin\EntityFramework.SqlServer.xml
 C:\Users\PC GAMER\Desktop\CProject\KisiselBlog\KisiselBlog\obj\Debug\KisiselBlog.Migrations.yazi.resources
 C:\Users\PC GAMER\Desktop\CProject\KisiselBlog\KisiselBlog\obj\Debug\KisiselBlog.csproj.GenerateResource.cache
+C:\Users\PC GAMER\Desktop\CProject\KisiselBlog\KisiselBlog\obj\Debug\KisiselBlog.Migrations.Kategoriler.resources

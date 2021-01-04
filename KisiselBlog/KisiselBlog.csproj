@@ -225,8 +225,13 @@
     <Compile Include="Migrations\202101032225260_yazi.designer.cs">
       <DependentUpon>202101032225260_yazi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101041705233_Kategoriler.cs" />
+    <Compile Include="Migrations\202101041705233_Kategoriler.designer.cs">
+      <DependentUpon>202101041705233_Kategoriler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\context\DataContext.cs" />
+    <Compile Include="Models\modeller\Kategoriler.cs" />
     <Compile Include="Models\modeller\Yazi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -255,6 +260,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101032225260_yazi.resx">
       <DependentUpon>202101032225260_yazi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101041705233_Kategoriler.resx">
+      <DependentUpon>202101041705233_Kategoriler.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

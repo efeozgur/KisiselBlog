@@ -10,6 +10,7 @@ namespace KisiselBlog.Models.context
     public class DataContext:DbContext
     {
         public DbSet<Yazi> Yazilar { get; set; }
+        public DbSet<Kategoriler> Kategoriler { get; set; }
 
     }
 }

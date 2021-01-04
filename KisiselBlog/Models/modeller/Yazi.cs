@@ -21,6 +21,7 @@ namespace KisiselBlog.Models.modeller
         [StringLength(50)]
         public string yazar { get; set; }
         public bool aktif { get; set; }
+        public virtual Kategoriler Kategoriler { get; set; }
 
     }
 }

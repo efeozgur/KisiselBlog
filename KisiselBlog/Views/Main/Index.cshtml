@@ -48,12 +48,15 @@
 
                 @foreach (var i in Model)
                 {
-                    <div class="yazi">
+                <div class="yazi">
 
-                        <h2> <a href="#">@i.baslik</a> <small style="font-size: 10px">@i.tarih</small> </h2>
-                        @i.metin 
-                                 <hr />
-                    </div>
+                    <h2> <a href="#">@i.baslik</a> <small style="font-size: 10px">@i.tarih</small> </h2>
+                    @{
+                        var yaziMetni = i.metin.Length;
+                    }
+                    @(yaziMetni>200?i.metin.Substring(0, 200)+"...":@i.metin)
+                    <hr />
+                </div>
                 }
 
 
@@ -75,7 +78,11 @@
                                 <h5 class="mb-1">@yazi.baslik</h5>
                                 <small class="text-muted">@yazi.tarih</small>
                             </div>
-                            <p class="mb-1">@yazi.metin.Substring(0, 100)</p>
+                            @{
+                                var yaziMetni = yazi.metin.Length;
+                            }
+                        
+                            <p class="mb-1">@(yaziMetni>100?@yazi.metin.Substring(0, 100):@yazi.metin)</p>
 
                         </a>
                     }
